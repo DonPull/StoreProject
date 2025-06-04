@@ -96,7 +96,7 @@ public class StoreTest {
         store.sell(cashier.getId(), Map.of("P2", 1));
         assertEquals(2, store.getTotalReceipts(), "Total receipts should count two sales");
         assertTrue(store.getTotalTurnover() > 0, "Turnover should be positive");
-        double expenses = store.getTotalCosts();
+        double expenses = store.getTotalExpenses();
         assertTrue(expenses > 0, "Costs should include salaries and delivery costs");
         double profit = store.getProfit();
         assertEquals(store.getTotalTurnover() - expenses, profit, 0.001, "Profit should be turnover minus costs");
